@@ -1,7 +1,7 @@
 export interface Skill {
   name: string;
   level: number; // 0-100
-  category: 'frontend' | 'backend' | 'design' | 'tools' | 'scripting';
+  category: 'frontend' | 'backend' | 'design' | 'tools';
 }
 
 export interface SocialLink {
@@ -20,7 +20,6 @@ export const personalInfo = {
 };
 
 export const skills: Skill[] = [
-  { name: "Luau", level: 95, category: "scripting" },
   { name: "React", level: 90, category: "frontend" },
   { name: "TypeScript", level: 85, category: "frontend" },
   { name: "CSS/SCSS", level: 90, category: "frontend" },
@@ -37,6 +36,7 @@ export const skills: Skill[] = [
   { name: "AWS", level: 65, category: "tools" }
 ];
 
+// Use icon keys that match the iconMap in App.tsx
 export const socialLinks: SocialLink[] = [
   {
     name: "Discord",
@@ -51,6 +51,6 @@ export const socialLinks: SocialLink[] = [
   {
     name: "Roblox",
     url: "https://www.roblox.com/users/your-roblox-id/profile",
-    icon: "Roblox"
+    icon: "Gamepad2"
   }
 ];
