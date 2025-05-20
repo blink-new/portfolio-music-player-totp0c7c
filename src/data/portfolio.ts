@@ -1,13 +1,3 @@
-export interface Project {
-  id: string;
-  title: string;
-  description: string;
-  image: string;
-  tags: string[];
-  githubUrl?: string;
-  liveUrl?: string;
-}
-
 export interface Skill {
   name: string;
   level: number; // 0-100
@@ -29,43 +19,6 @@ export const personalInfo = {
   availableForWork: true,
 };
 
-export const projects: Project[] = [
-  {
-    id: "1",
-    title: "Cosmic Explorer",
-    description: "An interactive 3D visualization of our solar system built with Three.js and React Three Fiber.",
-    image: "https://images.unsplash.com/photo-1614732414444-096e5f1122d5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    tags: ["React", "Three.js", "WebGL", "Framer Motion"],
-    githubUrl: "https://github.com",
-    liveUrl: "https://example.com"
-  },
-  {
-    id: "2",
-    title: "Rhythmic",
-    description: "A music streaming platform with a unique visualization system that reacts to the audio in real-time.",
-    image: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    tags: ["Next.js", "Web Audio API", "Tailwind CSS", "Supabase"],
-    githubUrl: "https://github.com",
-    liveUrl: "https://example.com"
-  },
-  {
-    id: "3",
-    title: "PixelPerfect",
-    description: "A design system and component library built for designers and developers to collaborate seamlessly.",
-    image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    tags: ["TypeScript", "Storybook", "Figma API", "Design Systems"],
-    githubUrl: "https://github.com",
-  },
-  {
-    id: "4",
-    title: "Urban Lens",
-    description: "A photography portfolio and marketplace for urban photographers to showcase and sell their work.",
-    image: "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    tags: ["React", "Firebase", "Stripe", "Cloudinary"],
-    liveUrl: "https://example.com"
-  }
-];
-
 export const skills: Skill[] = [
   { name: "React", level: 90, category: "frontend" },
   { name: "TypeScript", level: 85, category: "frontend" },
@@ -85,23 +38,18 @@ export const skills: Skill[] = [
 
 export const socialLinks = [
   {
+    name: "Discord",
+    url: "https://discord.com/users/your-id",
+    icon: "Discord"
+  },
+  {
     name: "GitHub",
-    url: "https://github.com",
+    url: "https://github.com/your-username",
     icon: "Github"
   },
   {
-    name: "LinkedIn",
-    url: "https://linkedin.com",
-    icon: "Linkedin"
-  },
-  {
-    name: "Twitter",
-    url: "https://twitter.com",
-    icon: "Twitter"
-  },
-  {
-    name: "Instagram",
-    url: "https://instagram.com",
-    icon: "Instagram"
+    name: "Roblox",
+    url: "https://www.roblox.com/users/your-id/profile",
+    icon: "Gamepad2"
   }
 ];

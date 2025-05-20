@@ -1,4 +1,4 @@
-import { Github, Linkedin, Twitter, Instagram, Mail } from 'lucide-react';
+import { Github, Gamepad2, Discord } from 'lucide-react';
 import { socialLinks, personalInfo } from '../data/portfolio';
 import { motion } from 'framer-motion';
 
@@ -7,12 +7,10 @@ export function Footer() {
     switch (iconName) {
       case 'Github':
         return <Github size={20} />;
-      case 'Linkedin':
-        return <Linkedin size={20} />;
-      case 'Twitter':
-        return <Twitter size={20} />;
-      case 'Instagram':
-        return <Instagram size={20} />;
+      case 'Discord':
+        return <Discord size={20} />;
+      case 'Roblox':
+        return <Gamepad2 size={20} />;
       default:
         return null;
     }
@@ -29,10 +27,9 @@ export function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
             <p className="text-zinc-400 text-sm">
-              © {new Date().getFullYear()} {personalInfo.name}. All rights reserved.
+              &copy; {new Date().getFullYear()} {personalInfo.name}. All rights reserved.
             </p>
           </div>
-          
           <div className="flex items-center space-x-6">
             {socialLinks.map((link, index) => (
               <motion.a
@@ -48,16 +45,6 @@ export function Footer() {
                 {getIconComponent(link.icon)}
               </motion.a>
             ))}
-            
-            <motion.a
-              href={`mailto:${personalInfo.email}`}
-              className="text-zinc-400 hover:text-white transition-colors"
-              aria-label="Send email"
-              whileHover={{ y: -3 }}
-              transition={{ type: "spring", stiffness: 400, damping: 10 }}
-            >
-              <Mail size={20} />
-            </motion.a>
           </div>
         </div>
       </div>
