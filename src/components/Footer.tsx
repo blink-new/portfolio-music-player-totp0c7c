@@ -1,16 +1,20 @@
-import { Github, Gamepad2, Discord } from 'lucide-react';
+import { Github, Gamepad2, Mail } from 'lucide-react';
 import { socialLinks, personalInfo } from '../data/portfolio';
 import { motion } from 'framer-motion';
+
+const DiscordIcon = () => (
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="M17.5 16.5c-1.5-1-3.5-1-5 0"/><path d="M8.5 16.5c1.5-1 3.5-1 5 0"/><path d="M9 9h.01"/><path d="M15 9h.01"/></svg>
+);
 
 export function Footer() {
   const getIconComponent = (iconName: string) => {
     switch (iconName) {
       case 'Github':
         return <Github size={20} />;
-      case 'Discord':
-        return <Discord size={20} />;
-      case 'Roblox':
+      case 'Gamepad2':
         return <Gamepad2 size={20} />;
+      case 'Discord':
+        return <DiscordIcon />;
       default:
         return null;
     }
@@ -45,6 +49,15 @@ export function Footer() {
                 {getIconComponent(link.icon)}
               </motion.a>
             ))}
+            <motion.a
+              href={`mailto:${personalInfo.email}`}
+              className="text-zinc-400 hover:text-white transition-colors"
+              aria-label="Send email"
+              whileHover={{ y: -3 }}
+              transition={{ type: "spring", stiffness: 400, damping: 10 }}
+            >
+              <Mail size={20} />
+            </motion.a>
           </div>
         </div>
       </div>

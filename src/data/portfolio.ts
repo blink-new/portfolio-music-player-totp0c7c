@@ -1,7 +1,7 @@
 export interface Skill {
   name: string;
   level: number; // 0-100
-  category: 'frontend' | 'backend' | 'design' | 'tools';
+  category: 'frontend' | 'backend' | 'design' | 'tools' | 'scripting';
 }
 
 export interface SocialLink {
@@ -20,6 +20,7 @@ export const personalInfo = {
 };
 
 export const skills: Skill[] = [
+  { name: "Luau", level: 95, category: "scripting" },
   { name: "React", level: 90, category: "frontend" },
   { name: "TypeScript", level: 85, category: "frontend" },
   { name: "CSS/SCSS", level: 90, category: "frontend" },
@@ -36,20 +37,20 @@ export const skills: Skill[] = [
   { name: "AWS", level: 65, category: "tools" }
 ];
 
-export const socialLinks = [
+export const socialLinks: SocialLink[] = [
   {
     name: "Discord",
-    url: "https://discord.com/users/your-id",
+    url: "https://discord.com/users/your-discord-id",
     icon: "Discord"
   },
   {
     name: "GitHub",
-    url: "https://github.com/your-username",
+    url: "https://github.com/ShadowWalker2014",
     icon: "Github"
   },
   {
     name: "Roblox",
-    url: "https://www.roblox.com/users/your-id/profile",
-    icon: "Gamepad2"
+    url: "https://www.roblox.com/users/your-roblox-id/profile",
+    icon: "Roblox"
   }
 ];
